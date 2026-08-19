@@ -94,20 +94,38 @@ If there are no errors, the installation is successful.
 
 ## Usage
 
-1. Clone the repository (if not already done):
-   ```bash
-   git clone https://github.com/your-username/pathogen-island-detection-toolkit.git
-   ```
+1. Clone the repository:
 
-2. Change into the project directory:
-   ```bash
-   cd pathogen-island-detection-toolkit
-   ```
+```bash
+git clone https://github.com/sapir-mardan/pathogen-genomic-analysis-toolkit
+cd pathogen-genomic-analysis-toolkit
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 3. Run the program:
-   ```bash
-    ./code/run_program.sh
-   ```
+
+```bash
+python program_functions.py
+```
+
+Follow the on-screen menu to:
+- Retrieve statistics about the presence of 4 pathogenic genes in new *Yersinia* strains
+- Retrieve statistics about any protein of your own against NCBI database
+- Retrieve protein sequences based on IDs from a FASTA file
+
+## My Role
+
+**Biopython integration:** FASTA parsing with `SeqIO.parse()`, sequence dictionary construction and lookup  
+**Data processing:** CSV enhancement (adding headers to BLAST tabular output), pandas DataFrame manipulation  
+**File handling:** Validation, error handling, user prompts  
+**Testing:** Unit tests covering core functions (pytest)
+
+Bash BLAST wrapper and menu structure co-authored with partner.
 
 ## Contribution 
 
